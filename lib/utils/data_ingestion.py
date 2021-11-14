@@ -36,7 +36,8 @@ def load_dataset(uploaded_file, uploaded_file_name, datasets_dict, option_box):
     if (uploaded_file is not None):
 
         uploaded_dataset = pd.read_csv(uploaded_file)
-        if 'labelling_uuid' not in uploaded_dataset.columns:
+        
+        if 'labelling_uuid' not in uploaded_dataset.columns and uploaded_dataset is not None:
             uploaded_dataset['labelling_uuid'] = [uuid.uuid4()
                                          for _ in range(len(dataset.index))]
         dataset = uploaded_dataset.copy()
