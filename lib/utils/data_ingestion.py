@@ -17,7 +17,7 @@ def load_dataset_from_list(dataset_name):
     else:
         dataset = pd.read_csv(f'data/datasets/{dataset_name}')
         if 'labelling_uuid' not in dataset.columns:
-            dataset['labelling_uuid'] = [uuid.uuid4()
+            dataset['labelling_uuid'] = [str(uuid.uuid4())
                                          for _ in range(len(dataset.index))]
         dataset.to_csv(f'data/datasets/{dataset_name}', index=False)
         return dataset
@@ -40,7 +40,7 @@ def load_dataset(uploaded_file, uploaded_file_name, datasets_dict, option_box):
         
         try:
             if 'labelling_uuid' not in uploaded_dataset.columns:
-                uploaded_dataset['labelling_uuid'] = [uuid.uuid4()
+                uploaded_dataset['labelling_uuid'] = [str(uuid.uuid4())
                                             for _ in range(len(dataset.index))]
             dataset = uploaded_dataset.copy()
         except :
