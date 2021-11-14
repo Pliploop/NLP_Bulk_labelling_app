@@ -78,7 +78,6 @@ target/
 /data/datasets/*
 /data/labeled_data/*
 /data/models/*
-/data/plotting_data/*
 
 !/data/datasets/.gitkeep
 !/data/datasets/.Bazaarvoice_test.csv
