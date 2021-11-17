@@ -176,8 +176,8 @@ def write():
     show_labeled = streamlit.sidebar.checkbox("Show labeled data")
     
     generate_sample_wordcloud = streamlit.sidebar.checkbox("Generate wordcloud")
-    streamlit.sidebar.write("Check it out on [Github!](https://github.com/Pliploop/NLP_Bulk_labelling_app)")
-    streamlit.sidebar.write("My [Linkedin](https://www.linkedin.com/in/julien-guinot/)")
+    streamlit.sidebar.caption("Check it out on [Github!](https://github.com/Pliploop/NLP_Bulk_labelling_app)")
+    streamlit.sidebar.caption("My [Linkedin](https://www.linkedin.com/in/julien-guinot/)")
     
     
 
