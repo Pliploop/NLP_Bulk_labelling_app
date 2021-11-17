@@ -42,9 +42,9 @@ def load_dataset(uploaded_file, uploaded_file_name, datasets_dict, option_box):
         try:
             if 'labelling_uuid' not in uploaded_dataset.columns:
                 uploaded_dataset['labelling_uuid'] = [str(uuid.uuid4())
-                                            for _ in range(len(dataset.index))]
+                                            for _ in range(len(uploaded_dataset.index))]
         except Exception as e:
-            streamlit.write(e)
+            pass
         dataset = uploaded_dataset.copy()
         
         if uploaded_file_name != '':
