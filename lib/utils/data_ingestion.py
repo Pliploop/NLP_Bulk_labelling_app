@@ -42,9 +42,10 @@ def load_dataset(uploaded_file, uploaded_file_name, datasets_dict, option_box):
             if 'labelling_uuid' not in uploaded_dataset.columns:
                 uploaded_dataset['labelling_uuid'] = [str(uuid.uuid4())
                                             for _ in range(len(dataset.index))]
-            dataset = uploaded_dataset.copy()
         except :
             pass
+        dataset = uploaded_dataset.copy()
+        
         if uploaded_file_name != '':
             uploaded_dataset.to_csv(
                 'data/datasets/{}.csv'.format(uploaded_file_name), index=False)
