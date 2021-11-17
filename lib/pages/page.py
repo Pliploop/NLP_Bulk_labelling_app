@@ -42,7 +42,9 @@ def write():
     #      SIDEBAR           #
     ##########################
 
-    streamlit.sidebar.title("Bulk labelling")
+    
+    image = Image.open('Chou.png')
+    streamlit.sidebar.image(image)
 
     ##########################
     #   UPLOADING DATASET    #
