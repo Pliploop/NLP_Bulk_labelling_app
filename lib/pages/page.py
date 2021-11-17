@@ -43,8 +43,7 @@ def write():
     ##########################
 
     
-    image = Image.open('Chou.png')
-    streamlit.sidebar.image(image)
+    streamlit.sidebar.image("Chou.png")
 
     ##########################
     #   UPLOADING DATASET    #
