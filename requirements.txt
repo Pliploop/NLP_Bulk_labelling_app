@@ -4,7 +4,6 @@ bokeh==2.2.0
 cymem==2.0.5
 datasets==1.7.0
 gensim==4.0.1
-click==7.1.1
 huggingface-hub==0.0.8
 Keras-Preprocessing==1.1.2
 matplotlib==3.4.2
@@ -28,3 +27,4 @@ numpy
 whatlies[tfhub]
 wordcloud
 jinja2==3.0.0
+click==7.1.1
