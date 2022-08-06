@@ -49,7 +49,7 @@ def write():
     #   UPLOADING DATASET    #
     ##########################
 
-    dataset_upload = streamlit.sidebar.beta_expander("1. Select your dataset")
+    dataset_upload = streamlit.sidebar.expander("1. Select your dataset")
 
     option_box = dataset_upload.empty()
     dataframe_preview = dataset_upload.empty()
@@ -69,7 +69,7 @@ def write():
         #   COLUMN SELECTION     #
         ##########################
 
-    column_select = streamlit.sidebar.beta_expander("2. Select column for analysis")
+    column_select = streamlit.sidebar.expander("2. Select column for analysis")
 
     if dataset is not None:
         column_name = column_select.selectbox(
@@ -101,9 +101,9 @@ def write():
         #   LANGUAGE MODEL SELECTION     #
         ##################################
 
-    embedding = streamlit.sidebar.beta_expander("3. Select your embedding framework")
-    embedding_lang_select = embedding.beta_container()
-    embedding_lang = embedding.beta_container()
+    embedding = streamlit.sidebar.expander("3. Select your embedding framework")
+    embedding_lang_select = embedding.container()
+    embedding_lang = embedding.container()
     languages_embedding = embedding_lang_select.multiselect(
         "Embedding framework languages",
         ["english", "french", "multilingual"],
@@ -120,7 +120,7 @@ def write():
     #   DIMENSION REDUCTION SELECTION     #
     #######################################
 
-    map = streamlit.sidebar.beta_expander("4. Dimension reduction algorithm")
+    map = streamlit.sidebar.expander("4. Dimension reduction algorithm")
     transformer_option = map.selectbox(
         "Dimension reduction framework", ("TSNE", "PCA", "Umap")
     )
@@ -129,12 +129,12 @@ def write():
     #           CLUSTER SUGGESTION        #
     #######################################
 
-    cluster_suggestion_sidebar = streamlit.sidebar.beta_expander(
+    cluster_suggestion_sidebar = streamlit.sidebar.expander(
         "5. Cluster suggestion"
     )
 
     suggest_clusters = cluster_suggestion_sidebar.checkbox("Suggest clusters?")
-    suggest_clusters_slider = cluster_suggestion_sidebar.beta_container()
+    suggest_clusters_slider = cluster_suggestion_sidebar.container()
     if suggest_clusters:
         xi = suggest_clusters_slider.checkbox("use xi method")
         epsilon = suggest_clusters_slider.slider("epsilon", 0.0, 10.0, 4.0, 0.1)
@@ -152,7 +152,7 @@ def write():
     #      EXPORTING DATA            #
     ##################################
 
-    export = streamlit.sidebar.beta_expander("6. Export your labeled data")
+    export = streamlit.sidebar.expander("6. Export your labeled data")
     dataset_name_container = export.empty()
     dataset_name = dataset_name_container.text_input("enter desired name for file")
     click_clear_dataset_name = export.button("Next label", key="export dataset")
@@ -189,10 +189,10 @@ def write():
     #   PAGE STRUCTURE       #
     ##########################
 
-    big_container = streamlit.beta_container()
-    progress_indicator = big_container.beta_container()
+    big_container = streamlit.container()
+    progress_indicator = big_container.container()
     progress_bar = progress_indicator.empty()
-    chart_container_over, options_container = big_container.beta_columns(2)
+    chart_container_over, options_container = big_container.columns(2)
     chart_container = chart_container_over.empty()
     info_container = options_container.empty()
     dataview_container = options_container.empty()
