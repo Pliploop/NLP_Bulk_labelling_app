@@ -15,7 +15,7 @@ scipy==1.6.3
 selenium==3.141.0
 sentence-transformers==1.2.0
 setuptools==57.0.0
-spacy==3.0.6
+spacy
 streamlit==1.8.0
 streamlit-bokeh-events==0.1.2
 tensorflow==2.5.0
