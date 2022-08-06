@@ -4,6 +4,7 @@ bokeh==2.2.0
 cymem==2.0.5
 datasets==1.7.0
 gensim==4.0.1
+click==7.1.1
 huggingface-hub==0.0.8
 Keras-Preprocessing==1.1.2
 matplotlib==3.4.2
@@ -19,6 +20,7 @@ spacy==3.0.6
 streamlit==0.82.0
 streamlit-bokeh-events==0.1.2
 tensorflow==2.5.0
+tensorboard==2.5.0
 transformers==4.6.1
 umap-learn==0.5.1
 whatlies==0.6.3
