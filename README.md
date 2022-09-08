@@ -1,5 +1,7 @@
 # A tool to help you label massive NLP datasets, quickly.
 
+A webapp of the project is available here : https://pliploop-nlp-bulk-labelling-app-main-app-qaetiy.streamlitapp.com/
+
 *This project has been tested with python 3.9*
 ## Installation
 
@@ -7,7 +9,7 @@
 
 First clone the repo by shelling:
 
-```git clone git@github.com:artefactory/bulk_labelling.git && cd bulk_labelling/```
+```git clone git@github.com:Pliploop/NLP_Bulk_labelling_app.git && cd NLP_Bulk_labelling_app/```
 
 to install all the dependencies for the project as well as the sample datasets and necessary models, run:
 
